@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+
+        .flex-container {
+            width: 100%;
+            display: -webkit-flexbox;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        canvas {
+            /* https://stackoverflow.com/questions/14068103/disable-antialising-when-scaling-images */
+            image-rendering: optimizeSpeed;
+            /* STOP SMOOTHING, GIVE ME SPEED  */
+            image-rendering: -moz-crisp-edges;
+            /* Firefox                        */
+            image-rendering: -o-crisp-edges;
+            /* Opera                          */
+            image-rendering: -webkit-optimize-contrast;
+            /* Chrome (and eventually Safari) */
+            image-rendering: pixelated;
+            /* Chrome */
+            image-rendering: optimize-contrast;
+            /* CSS3 Proposed                  */
+            -ms-interpolation-mode: nearest-neighbor;
+            /* IE8+                           */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="pacman-game">
+            <img id='brettBildet' src="images/PacmanBoardGRID.png" alt="" style="display: none;">
+            <img id='spriteBildet' src="images/PacmanSprites.png" alt="" style="display: none">
+            <canvas id="canvas"></canvas>
+            <p id="score">Score:</p>
+            <p id="teswt"></p>
+
+
+        </div>
+    </div>
+
+
+    <!-- https://stackoverflow.com/questions/44590393/es6-modules-undefined-onclick-function-after-import -->
+    <script type="module" src="script.js"></script>
+    
+
+
+
+</body>
