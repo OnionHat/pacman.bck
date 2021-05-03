@@ -33,7 +33,7 @@ class Blinky {
         // console.log('+++++++++++++++++++++++++++++++++++');
         // console.log('MOT1',this.faaMotsattRettning());
         
-        // this.aktivRettning = this.velgRettning(pacman);
+        this.aktivRettning = this.velgRettning(pacman);
         // console.log(this.aktivRettning)
         
         // console.log('MOT2',this.faaMotsattRettning());
@@ -107,7 +107,6 @@ class Blinky {
                             optimaleRettning = [rettning, strekning]
                         }
                     }
-                    this.tiles[Math.floor(this.pos.y / 8)][Math.floor(this.pos.x / 8) + 1].tegnVegg()
                     break;
                 case 'ned':
                     if (!this.tiles[Math.floor(this.pos.y / 8) + 1][Math.floor(this.pos.x / 8)].type.vegg) {
@@ -120,7 +119,6 @@ class Blinky {
                             optimaleRettning = [rettning, strekning]
                         }
                     }
-                    this.tiles[Math.floor(this.pos.y / 8) + 1][Math.floor(this.pos.x / 8)].tegnVegg();
                     break;
                 case 'venstre':
                     if (!this.tiles[Math.floor(this.pos.y / 8)][Math.floor(this.pos.x / 8) - 1].type.vegg) {
